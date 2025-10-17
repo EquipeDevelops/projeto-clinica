@@ -1,0 +1,123 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum EspecialidadeProfissional {
+  PSICOLOGIA
+  FISIOTERAPIA
+  MEDICINA
+  ENFERMAGEM
+  PSICOPEDAGOGA
+  TERAPEUTAOCUPACIONAL
+  NUTRICAO
+  ODONTOLOGIA
+  }
+
+enum StatusConsulta {
+  AGENDADA
+  REALIZADA
+  CANCELADA
+  REMARCADA
+  }
+
+enum TipoProfissional { 
+    Recepcionista
+    EspecialistaSaude
+  }
+
+
+model Profissional {
+
+  id               String    @id @default(uuid())
+  profissional     TipoProfissional
+  especialidade    EspecialidadeProfissional
+  nome             String
+  Sobrenome        String
+  idade            Int
+
+  disponibilidades  DateTime
+
+  telefone         Int      @unique
+
+  codigoProfissional String   @unique
+
+  consultas        Consulta[]
+  criado_em        DateTime @default(now())
+  atualizado_em    DateTime @updatedAt
+}
+
+
+
+model Paciente {
+
+  id               String    @id @default(uuid())
+
+  nome             String
+  email            String   @unique
+  idade            Int
+  dataNascimento  DateTime
+
+  sexo             String
+
+  endereco         String
+  cep              Int
+  logradouro      String
+  complemento     String
+      
+  bairro        String
+  numero          Int
+  cidade          String
+  uf          String 
+  estado        String
+  celular          Int      @unique
+
+  cpf              String   @unique
+
+  responsavelNome  String? // Se houver um responsável
+  telefoneResponsavel Int?
+  idadeResponsavel Int?
+  emailResponsavel String?
+
+  consultas        Consulta[]
+  criado_em        DateTime @default(now())
+  atualizado_em    DateTime @updatedAt
+
+}
+
+
+
+model Consulta {
+
+  id               String     @id @default(uuid())
+  dataHora         DateTime
+  salaLocal        String?
+  observacao       String?
+  profissionalId   String
+  profissional     Profissional @relation(fields: [profissionalId], references: [id])
+  clienteId        String
+  cliente          Paciente      @relation(fields: [clienteId], references: [id])
+  status          StatusConsulta @default(AGENDADA)
+  criado_em        DateTime @default(now())
+  atualizado_em    DateTime @updatedAt
+}
+
+
+
+
+
+
+
+
+
+
