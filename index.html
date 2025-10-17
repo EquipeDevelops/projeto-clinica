@@ -1,9 +1,540 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuroclin - Clínica Neurológica</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .open .accordion-content {
+            transition: max-height 0.3s ease-in;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+
+    <header id="page-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center shadow-lg">
+                        <i data-lucide="brain" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-base sm:text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                            Neuroclin
+                        </h1>
+                        <p class="text-xs text-gray-500 hidden sm:block">
+                            Clínica Neurológica
+                        </p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a href="#services" class="text-sm text-gray-700 hover:text-blue-600 transition-colors">Serviços</a>
+                    <a href="#process" class="text-sm text-gray-700 hover:text-blue-600 transition-colors">Como Funciona</a>
+                    <a href="#about" class="text-sm text-gray-700 hover:text-blue-600 transition-colors">Sobre</a>
+                    <a href="#contact" class="text-sm text-gray-700 hover:text-blue-600 transition-colors">Contato</a>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Neuroclin." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all h-9 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg text-white">
+                        <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>
+                        Agendar
+                    </a>
+                </nav>
+
+                <div class="lg:hidden">
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Neuroclin." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all h-8 px-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+                        <i data-lucide="message-circle" class="w-4 h-4 sm:mr-2"></i>
+                        <span class="hidden sm:inline">Agendar</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50 -z-10"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100/50 via-transparent to-transparent -z-10"></div>
+            <div class="absolute top-20 right-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 left-10 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+                    <div class="space-y-4 sm:space-y-6 order-2 lg:order-1">
+                        <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 border-0 shadow-lg">
+                            <i data-lucide="sparkles" class="size-3 mr-1"></i>
+                            Excelência em Neurologia
+                        </span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+                            Cuidado Especializado para sua <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Saúde Neurológica</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                            Equipe multidisciplinar dedicada ao diagnóstico, tratamento e reabilitação neurológica com tecnologia de ponta e atendimento humanizado.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
+                             <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Neuroclin." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all h-10 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transform hover:scale-105 text-white">
+                                <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                                Agendar pelo WhatsApp
+                            </a>
+                            <a href="#services" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all h-10 px-6 border bg-background text-foreground hover:bg-accent hover:text-accent-foreground border-2 border-blue-600 text-blue-600 hover:bg-blue-50 shadow-md">
+                                Conhecer Serviços
+                                <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="relative order-1 lg:order-2">
+                        <div class="relative aspect-square sm:aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl ring-4 ring-blue-100">
+                            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwYXRpZW50JTIwY29uc3VsdGF0aW9ufGVufDF8fHx8MTc2MDY0Njc2Nnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Neuroclin - Atendimento Especializado" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 hidden sm:block">
+                <div class="flex flex-col items-center gap-2 text-gray-400 animate-bounce">
+                    <span class="text-xs">Role para explorar</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 sm:py-16 px-4 sm:px-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 30px 30px;"></div>
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+                    <div class="text-center text-white transform hover:scale-110 transition-transform">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg"><i data-lucide="award" class="w-7 h-7 sm:w-8 sm:h-8"></i></div>
+                        <p class="text-3xl sm:text-5xl font-bold mb-1 sm:mb-2">15+</p>
+                        <p class="text-xs sm:text-sm opacity-90">Anos de Experiência</p>
+                    </div>
+                    <div class="text-center text-white transform hover:scale-110 transition-transform">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg"><i data-lucide="users" class="w-7 h-7 sm:w-8 sm:h-8"></i></div>
+                        <p class="text-3xl sm:text-5xl font-bold mb-1 sm:mb-2">5.000+</p>
+                        <p class="text-xs sm:text-sm opacity-90">Pacientes Atendidos</p>
+                    </div>
+                    <div class="text-center text-white transform hover:scale-110 transition-transform">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg"><i data-lucide="trending-up" class="w-7 h-7 sm:w-8 sm:h-8"></i></div>
+                        <p class="text-3xl sm:text-5xl font-bold mb-1 sm:mb-2">98%</p>
+                        <p class="text-xs sm:text-sm opacity-90">Índice de Satisfação</p>
+                    </div>
+                    <div class="text-center text-white transform hover:scale-110 transition-transform">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg"><i data-lucide="zap" class="w-7 h-7 sm:w-8 sm:h-8"></i></div>
+                        <p class="text-3xl sm:text-5xl font-bold mb-1 sm:mb-2">24h</p>
+                        <p class="text-xs sm:text-sm opacity-90">Resposta de Exames</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-b from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12 sm:mb-16">
+                    <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium mb-4 bg-blue-100 text-blue-700 border-0">Nossos Serviços</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Especialidades e <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Tratamentos</span></h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Oferecemos uma gama completa de serviços neurológicos com tecnologia de ponta e equipe especializada.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                    <div class="group relative overflow-hidden rounded-xl border-0 bg-white p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg"><i data-lucide="brain" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                            <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Neurologia Clínica</h3>
+                            <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Diagnóstico e tratamento de doenças neurológicas como epilepsia, Alzheimer, Parkinson e muito mais.</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl border-0 bg-white p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                         <div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg"><i data-lucide="activity" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                            <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Neurofisiologia</h3>
+                            <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Exames de eletroencefalograma (EEG), eletroneuromiografia e potenciais evocados.</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl border-0 bg-white p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                         <div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg"><i data-lucide="heart-pulse" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                            <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Reabilitação Neurológica</h3>
+                            <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Programas personalizados de reabilitação para AVC, traumas e doenças degenerativas.</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl border-0 bg-white p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                       <div class="relative z-10">
+                           <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg"><i data-lucide="stethoscope" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                           <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Medicina do Sono</h3>
+                           <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Avaliação e tratamento de distúrbios do sono como apneia, insônia e narcolepsia.</p>
+                       </div>
+                   </div>
+                   <div class="group relative overflow-hidden rounded-xl border-0 bg-white p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                       <div class="relative z-10">
+                           <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg"><i data-lucide="microscope" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                           <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Neurologia Pediátrica</h3>
+                           <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Atendimento especializado para crianças e adolescentes com questões neurológicas.</p>
+                       </div>
+                   </div>
+                   <div class="group relative overflow-hidden rounded-xl border-0 bg-white p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                       <div class="relative z-10">
+                           <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg"><i data-lucide="target" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                           <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Cefaleia e Dor</h3>
+                           <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Tratamento especializado para enxaqueca, dores de cabeça crônicas e dores neuropáticas.</p>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="py-16 sm:py-24 px-4 sm:px-6 bg-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-400/5 rounded-full blur-3xl"></div>
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-12 sm:mb-16">
+                    <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium mb-4 bg-indigo-100 text-indigo-700 border-0">Como Funciona</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Seu Caminho para o <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Bem-Estar</span></h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Um processo simples e eficiente, focado no seu cuidado.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                    <div class="relative text-center">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg relative">
+                            <i data-lucide="message-circle" class="w-8 h-8 sm:w-10 sm:h-10 text-white"></i>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 sm:w-10 sm:h-10 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 text-sm sm:text-base font-bold shadow-lg">1</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Agende sua Consulta</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Entre em contato via WhatsApp, telefone ou formulário online.</p>
+                    </div>
+                    <div class="relative text-center">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg relative">
+                            <i data-lucide="file-text" class="w-8 h-8 sm:w-10 sm:h-10 text-white"></i>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 sm:w-10 sm:h-10 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 text-sm sm:text-base font-bold shadow-lg">2</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Primeira Avaliação</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Consulta detalhada com histórico médico completo.</p>
+                    </div>
+                    <div class="relative text-center">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg relative">
+                            <i data-lucide="clipboard" class="w-8 h-8 sm:w-10 sm:h-10 text-white"></i>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 sm:w-10 sm:h-10 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 text-sm sm:text-base font-bold shadow-lg">3</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Diagnóstico Preciso</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Exames e análises com tecnologia de ponta.</p>
+                    </div>
+                    <div class="relative text-center">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg relative">
+                            <i data-lucide="user-check" class="w-8 h-8 sm:w-10 sm:h-10 text-white"></i>
+                            <div class="absolute -top-2 -right-2 w-8 h-8 sm:w-10 sm:h-10 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-blue-600 text-sm sm:text-base font-bold shadow-lg">4</div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Tratamento Personalizado</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Plano terapêutico desenvolvido especialmente para você.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, white 2px, transparent 2px); background-size: 40px 40px;"></div>
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 text-white">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span class="text-sm">Agende hoje mesmo</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Pronto para cuidar da sua saúde neurológica?</h2>
+                <p class="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">Nossa equipe está pronta para oferecer o melhor atendimento. Agende sua consulta e inicie seu tratamento.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Neuroclin." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all h-10 px-6 bg-white text-blue-600 hover:bg-gray-100 shadow-xl hover:shadow-2xl transform hover:scale-105">
+                        <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i> Agendar Agora
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-blue-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12 sm:mb-16">
+                    <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium mb-4 bg-purple-100 text-purple-700 border-0">Nossos Diferenciais</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Por que escolher a <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Neuroclin?</span></h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Referência em atendimento neurológico com excelência e humanização.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                    <div class="group relative overflow-hidden p-6 sm:p-8 text-center rounded-xl border-0 bg-white/80 backdrop-blur hover:shadow-xl transition-all hover:-translate-y-2">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-indigo-600/0 group-hover:from-blue-600/5 group-hover:to-indigo-600/5 transition-all"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg"><i data-lucide="shield" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                            <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Equipe Especializada</h3>
+                            <p class="text-sm sm:text-base text-gray-600">Neurologistas certificados e em constante atualização.</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden p-6 sm:p-8 text-center rounded-xl border-0 bg-white/80 backdrop-blur hover:shadow-xl transition-all hover:-translate-y-2">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-indigo-600/0 group-hover:from-blue-600/5 group-hover:to-indigo-600/5 transition-all"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg"><i data-lucide="microscope" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                            <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Tecnologia Avançada</h3>
+                            <p class="text-sm sm:text-base text-gray-600">Equipamentos de última geração para diagnóstico preciso.</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden p-6 sm:p-8 text-center rounded-xl border-0 bg-white/80 backdrop-blur hover:shadow-xl transition-all hover:-translate-y-2">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-indigo-600/0 group-hover:from-blue-600/5 group-hover:to-indigo-600/5 transition-all"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg"><i data-lucide="heart" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                            <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Atendimento Humanizado</h3>
+                            <p class="text-sm sm:text-base text-gray-600">Cuidado personalizado focado no bem-estar do paciente.</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden p-6 sm:p-8 text-center rounded-xl border-0 bg-white/80 backdrop-blur hover:shadow-xl transition-all hover:-translate-y-2">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-indigo-600/0 group-hover:from-blue-600/5 group-hover:to-indigo-600/5 transition-all"></div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg"><i data-lucide="calendar" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                            <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Agendamento Fácil</h3>
+                            <p class="text-sm sm:text-base text-gray-600">Marcação rápida e flexibilidade de horários.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12 sm:mb-16">
+                    <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium mb-4 bg-green-100 text-green-700 border-0">Nossas Instalações</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Ambiente Moderno e <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Acolhedor</span></h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Infraestrutura de ponta para seu conforto e cuidado.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                    <div class="relative group overflow-hidden rounded-2xl aspect-[4/3] shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1758101512269-660feabf64fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtZWRpY2FsJTIwY2xpbmljJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzYwNTUyMTgwfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Recepção Moderna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end">
+                            <p class="text-white p-4 sm:p-6 text-lg sm:text-xl font-semibold">Recepção Moderna</p>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-2xl aspect-[4/3] shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1758691461888-b74515208d7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob3NwaXRhbCUyMGVxdWlwbWVudHxlbnwxfHx8fDE3NjA2NTIyMzd8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Equipamentos de Ponta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end">
+                            <p class="text-white p-4 sm:p-6 text-lg sm:text-xl font-semibold">Equipamentos de Ponta</p>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-2xl aspect-[4/3] shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1581982231900-6a1a46b744c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwcmVjZXB0aW9uJTIwd2FpdGluZyUyMHJvb218ZW58MXx8fHwxNzYwNjUyMjM3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Sala de Espera Confortável" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end">
+                            <p class="text-white p-4 sm:p-6 text-lg sm:text-xl font-semibold">Sala de Espera Confortável</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 sm:py-24 px-4 sm:px-6 bg-gray-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12 sm:mb-16">
+                    <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium mb-4 bg-orange-100 text-orange-700 border-0">Nossa Equipe</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Profissionais <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Especializados</span></h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Equipe multidisciplinar com vasta experiência e dedicação ao cuidado do paciente.</p>
+                </div>
+                <div class="relative aspect-[21/10] sm:aspect-[21/9] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl mb-8 sm:mb-12">
+                    <img src="https://images.unsplash.com/photo-1758205307854-5f0b57c27f17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGVhbSUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NjA1ODAyNDN8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Equipe Neuroclin" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                    <div class="p-6 sm:p-8 text-center border-0 shadow-lg bg-gradient-to-br from-white to-blue-50 rounded-xl">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg"><i data-lucide="users" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">10+</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Neurologistas</p>
+                    </div>
+                    <div class="p-6 sm:p-8 text-center border-0 shadow-lg bg-gradient-to-br from-white to-indigo-50 rounded-xl">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg"><i data-lucide="award" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">100%</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Titulados</p>
+                    </div>
+                    <div class="p-6 sm:p-8 text-center border-0 shadow-lg bg-gradient-to-br from-white to-purple-50 rounded-xl">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg"><i data-lucide="heart-pulse" class="w-7 h-7 sm:w-8 sm:h-8 text-white"></i></div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">24/7</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Dedicação</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12 sm:mb-16">
+                    <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium mb-4 bg-pink-100 text-pink-700 border-0">Depoimentos</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">O que nossos <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">pacientes dizem</span></h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Histórias reais de cuidado e transformação.</p>
+                </div>
+                <div class="relative max-w-4xl mx-auto">
+                    <div class="overflow-hidden">
+                        <div id="testimonial-slider" class="flex transition-transform duration-500 ease-out">
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="p-8 sm:p-12 border-0 bg-gradient-to-br from-blue-50 to-indigo-50 shadow-xl rounded-xl">
+                                    <div class="flex justify-center mb-4">
+                                        <i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i>
+                                    </div>
+                                    <p class="text-lg sm:text-xl text-gray-700 mb-8 italic leading-relaxed text-center">"A equipe da Neuroclin é excepcional! O atendimento é atencioso e os profissionais são altamente qualificados. Meu tratamento teve resultados surpreendentes."</p>
+                                    <div class="flex items-center justify-center gap-4">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white text-xl font-semibold">M</div>
+                                        <div class="text-left"><p class="text-lg font-medium text-gray-800">Maria Silva</p><p class="text-sm text-gray-500">Paciente</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="w-full flex-shrink-0 px-4">
+                                <div class="p-8 sm:p-12 border-0 bg-gradient-to-br from-blue-50 to-indigo-50 shadow-xl rounded-xl">
+                                    <div class="flex justify-center mb-4">
+                                        <i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i>
+                                    </div>
+                                    <p class="text-lg sm:text-xl text-gray-700 mb-8 italic leading-relaxed text-center">"Clínica moderna, bem equipada e com profissionais muito competentes. O Dr. foi muito atencioso no diagnóstico da minha enxaqueca. Recomendo muito!"</p>
+                                    <div class="flex items-center justify-center gap-4">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white text-xl font-semibold">J</div>
+                                        <div class="text-left"><p class="text-lg font-medium text-gray-800">João Santos</p><p class="text-sm text-gray-500">Paciente</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="w-full flex-shrink-0 px-4">
+                                <div class="p-8 sm:p-12 border-0 bg-gradient-to-br from-blue-50 to-indigo-50 shadow-xl rounded-xl">
+                                    <div class="flex justify-center mb-4">
+                                        <i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i><i data-lucide="star" class="w-6 h-6 text-yellow-400 fill-yellow-400"></i>
+                                    </div>
+                                    <p class="text-lg sm:text-xl text-gray-700 mb-8 italic leading-relaxed text-center">"Fui muito bem atendida desde a recepção até a consulta. O ambiente é acolhedor e os exames são realizados com muito cuidado e precisão."</p>
+                                    <div class="flex items-center justify-center gap-4">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white text-xl font-semibold">A</div>
+                                        <div class="text-left"><p class="text-lg font-medium text-gray-800">Ana Costa</p><p class="text-sm text-gray-500">Paciente</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center gap-4 mt-8">
+                        <button id="prev-testimonial" class="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-colors w-10 h-10 p-0 border border-gray-300 bg-white hover:bg-gray-100"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                        <div id="testimonial-dots" class="flex gap-2"></div>
+                        <button id="next-testimonial" class="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-colors w-10 h-10 p-0 border border-gray-300 bg-white hover:bg-gray-100"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-white">
+            <div class="max-w-4xl mx-auto">
+                 <div class="text-center mb-12 sm:mb-16">
+                    <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium mb-4 bg-teal-100 text-teal-700 border-0">Perguntas Frequentes</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Tire suas <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">dúvidas</span></h2>
+                    <p class="text-lg sm:text-xl text-gray-600">Respondemos as perguntas mais comuns dos nossos pacientes.</p>
+                </div>
+                <div id="faq-accordion" class="space-y-4">
+                    <div class="border-0 bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="accordion-trigger flex w-full items-start justify-between gap-4 text-left px-6 py-4 hover:bg-blue-50 transition-colors">
+                            <span class="text-base sm:text-lg font-medium">Quais convênios são aceitos?</span>
+                            <i data-lucide="chevron-down" class="text-gray-500 size-4 shrink-0 mt-1 transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content"><div class="px-6 pb-4 text-gray-600 text-sm sm:text-base">Trabalhamos com os principais convênios médicos: Unimed, Bradesco Saúde, SulAmérica, Amil, Golden Cross, entre outros. Também atendemos particular com valores acessíveis.</div></div>
+                    </div>
+                    <div class="border-0 bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="accordion-trigger flex w-full items-start justify-between gap-4 text-left px-6 py-4 hover:bg-blue-50 transition-colors">
+                            <span class="text-base sm:text-lg font-medium">Como agendar uma consulta?</span>
+                            <i data-lucide="chevron-down" class="text-gray-500 size-4 shrink-0 mt-1 transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content"><div class="px-6 pb-4 text-gray-600 text-sm sm:text-base">Você pode agendar sua consulta pelo WhatsApp, telefone ou através do nosso sistema online. O agendamento é rápido e fácil, com confirmação imediata.</div></div>
+                    </div>
+                    <div class="border-0 bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="accordion-trigger flex w-full items-start justify-between gap-4 text-left px-6 py-4 hover:bg-blue-50 transition-colors">
+                            <span class="text-base sm:text-lg font-medium">A clínica oferece atendimento de urgência?</span>
+                            <i data-lucide="chevron-down" class="text-gray-500 size-4 shrink-0 mt-1 transition-transform duration-200"></i>
+                        </button>
+                        <div class="accordion-content"><div class="px-6 pb-4 text-gray-600 text-sm sm:text-base">Trabalhamos com agendamento programado. Em casos de urgência neurológica, recomendamos procurar o pronto-socorro mais próximo.</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12 sm:mb-16">
+                    <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium mb-4 bg-cyan-100 text-cyan-700 border-0">Entre em Contato</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Estamos prontos para <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">atendê-lo</span></h2>
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Escolha a melhor forma de entrar em contato conosco.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 text-center hover:shadow-xl transition-all border-0 bg-gradient-to-br from-white to-blue-50 hover:-translate-y-1 rounded-xl">
+                        <div class="w-14 h-14 bg-gradient-to-br from-green-600 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"><i data-lucide="message-circle" class="w-7 h-7 text-white"></i></div>
+                        <h3 class="text-lg font-bold mb-2">WhatsApp</h3>
+                        <p class="text-sm text-gray-600 mb-4">Atendimento rápido</p>
+                        <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Neuroclin." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors w-full bg-green-600 hover:bg-green-700 text-white h-9 px-4 py-2">Enviar Mensagem</a>
+                    </div>
+                     <div class="p-6 text-center hover:shadow-xl transition-all border-0 bg-gradient-to-br from-white to-indigo-50 hover:-translate-y-1 rounded-xl">
+                        <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"><i data-lucide="phone" class="w-7 h-7 text-white"></i></div>
+                        <h3 class="text-lg font-bold mb-2">Telefone</h3>
+                        <p class="text-sm text-gray-600 mb-4">(11) 99999-9999</p>
+                        <a href="tel:+5511999999999" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors w-full border-2 border-blue-600 text-blue-600 h-9 px-4 py-2 hover:bg-blue-50">Ligar Agora</a>
+                    </div>
+                    <div class="p-6 text-center hover:shadow-xl transition-all border-0 bg-gradient-to-br from-white to-purple-50 hover:-translate-y-1 rounded-xl">
+                        <div class="w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"><i data-lucide="mail" class="w-7 h-7 text-white"></i></div>
+                        <h3 class="text-lg font-bold mb-2">E-mail</h3>
+                        <p class="text-sm text-gray-600 mb-4">contato@neuroclin.com.br</p>
+                        <a href="mailto:contato@neuroclin.com.br" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors w-full border-2 border-purple-600 text-purple-600 h-9 px-4 py-2 hover:bg-purple-50">Enviar E-mail</a>
+                    </div>
+                    <div class="p-6 text-center hover:shadow-xl transition-all border-0 bg-gradient-to-br from-white to-pink-50 hover:-translate-y-1 rounded-xl">
+                        <div class="w-14 h-14 bg-gradient-to-br from-pink-600 to-pink-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"><i data-lucide="map-pin" class="w-7 h-7 text-white"></i></div>
+                        <h3 class="text-lg font-bold mb-2">Endereço</h3>
+                        <p class="text-sm text-gray-600 mb-4">Av. Paulista, 1000 - São Paulo/SP</p>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors w-full border-2 border-pink-600 text-pink-600 h-9 px-4 py-2 hover:bg-pink-50">Ver no Mapa</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-12 sm:py-16 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                 <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center shadow-lg"><i data-lucide="brain" class="w-6 h-6 text-white"></i></div>
+                        <div><h3 class="text-lg font-bold">Neuroclin</h3><p class="text-xs text-gray-400">Clínica Neurológica</p></div>
+                    </div>
+                    <p class="text-sm text-gray-400">Excelência em neurologia com atendimento humanizado e tecnologia de ponta.</p>
+                </div>
+                <div>
+                    <h4 class="text-base font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#services" class="hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="#process" class="hover:text-white transition-colors">Como Funciona</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">Sobre Nós</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="text-base font-bold mb-4">Horário de Atendimento</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i><span>Segunda a Sexta: 8h - 18h</span></li>
+                        <li class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i><span>Sábado: 8h - 12h</span></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="text-base font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i><span>(11) 99999-9999</span></li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i><span>contato@neuroclin.com.br</span></li>
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i><span>Av. Paulista, 1000 - SP</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 Neuroclin. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Neuroclin." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-2xl z-50 transition-all hover:scale-110">
+        <i data-lucide="message-circle" class="w-7 h-7 text-white"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
 </html>
